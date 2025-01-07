@@ -1,11 +1,11 @@
-import { NAV_ITEMS } from '@/utils/consts'
-import { Button } from '@/components/ui/button'
 import {
   MagnifyingGlassIcon,
   ShoppingBagIcon,
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import {
   Sheet,
   SheetContent,
@@ -14,7 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
-import { Input } from '@/components/ui/input'
+import { NAV_ITEMS } from '@/utils/consts'
 
 export const Header = () => {
   return (
