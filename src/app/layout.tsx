@@ -1,3 +1,4 @@
+import { Header } from '@/components/organisms/header'
 import './globals.css'
 
 import type { Metadata } from 'next'
@@ -51,7 +52,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${asulFont.variable} antialiased`}>{children}</body>
+      <body
+        className={`${asulFont.variable} mx-auto min-h-screen max-w-screen-2xl antialiased`}
+      >
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
