@@ -3,6 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Asul } from 'next/font/google'
 
+import { Header } from '@/components/organisms/header'
+
 const asulFont = Asul({
   variable: '--font-asul',
   weight: ['400', '700'],
@@ -51,7 +53,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${asulFont.variable} antialiased`}>{children}</body>
+      <body
+        className={`${asulFont.variable} mx-auto min-h-screen max-w-screen-2xl antialiased`}
+      >
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
