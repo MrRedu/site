@@ -11,7 +11,7 @@ export function Section({
   component: Component = 'div',
 }: SectionProps) {
   return (
-    <Component className={`px-5 md:px-8 lg:px-12 2xl:px-16 ${className}`}>
+    <Component className={`px-5 py-16 md:px-8 lg:px-12 2xl:px-16 ${className}`}>
       {children}
     </Component>
   )
