@@ -1,6 +1,6 @@
+import { CollectionCard } from '@/components/molecules/collection-card'
+import { Gallery } from '@/components/molecules/gallery'
 import { CATEGORIES } from '@/utils/consts'
-import { CollectionCard } from '../molecules/collection-card'
-import { Gallery } from '../molecules/gallery'
 
 export const CategoriesGallery = () => {
   return (

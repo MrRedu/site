@@ -2,6 +2,7 @@ import {
   MagnifyingGlassIcon,
   ShoppingBagIcon,
 } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
@@ -45,7 +46,13 @@ export const Header = () => {
         </SheetContent>
       </Sheet>
 
-      <img src="/logo.svg" alt="logo" className="size-10 justify-self-center" />
+      <Image
+        src="/logotype.svg"
+        alt="Logotype"
+        className="h-full w-24 justify-self-center"
+        width={150}
+        height={300}
+      />
 
       <Button
         size="icon"
