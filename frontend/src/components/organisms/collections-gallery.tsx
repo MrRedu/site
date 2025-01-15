@@ -1,11 +1,11 @@
 import { CollectionCard } from '@/components/molecules/collection-card'
 import { Gallery } from '@/components/molecules/gallery'
-import { CATEGORIES } from '@/utils/consts'
+import { COLLECTIONS } from '@/utils/consts'
 
-export const CategoriesGallery = () => {
+export const CollectionsGallery = () => {
   return (
     <Gallery>
-      {CATEGORIES.map((category, index) => (
+      {COLLECTIONS.map((category, index) => (
         <CollectionCard
           key={category.id}
           index={index}

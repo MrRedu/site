@@ -16,12 +16,16 @@ export const NAV_ITEMS = [
     label: 'Info',
   },
   {
+    href: '/commission',
+    label: 'Commission',
+  },
+  {
     href: '/contact',
     label: 'Contact',
   },
 ]
 
-export const CATEGORIES = [
+export const COLLECTIONS = [
   {
     id: 1,
     label: '~ New ~',
