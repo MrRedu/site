@@ -19,7 +19,7 @@ import { NAV_ITEMS } from '@/utils/consts'
 
 export const Header = () => {
   return (
-    <header className="grid grid-cols-3 grid-rows-2 px-2 py-5 md:px-4 lg:px-6">
+    <header className="grid grid-cols-3 grid-rows-2 gap-y-6 px-2 py-5 md:px-4 lg:px-6">
       <h1 className="hidden">Site</h1>
       <Sheet>
         <SheetTrigger asChild>
