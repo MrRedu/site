@@ -53,6 +53,7 @@ export default {
         // Personal colors
         gold: '#F5E653',
         cod: '#3B3D3C',
+        vampire: '#0A0A0A',
       },
       borderRadius: {
         lg: 'var(--radius)',
