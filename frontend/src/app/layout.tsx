@@ -3,8 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Asul } from 'next/font/google'
 
-import { Header } from '@/components/organisms/header'
 import { Footer } from '@/components/organisms/footer'
+import { Header } from '@/components/organisms/header'
 
 const asulFont = Asul({
   variable: '--font-asul',
