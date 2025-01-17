@@ -6,9 +6,9 @@ import { Product } from '../types/product.type'
 export function useProducts() {
   const URL_ALL_PRODUCTS_WITH_COVER = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?populate=*`
 
-  const [products, setProducts] = useState<Product[] | undefined>()
+  const [products, setProducts] = useState<Product[] | undefined>(undefined)
   const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [error, setError] = useState<unknown>()
+  const [error, setError] = useState<Error | undefined>()
 
   useEffect(() => {
     ;(async () => {
@@ -19,7 +19,7 @@ export function useProducts() {
         )
         setProducts(data.data as Product[])
       } catch (error) {
-        setError(error as unknown)
+        setError(error as Error)
       } finally {
         setIsLoading(false)
       }
