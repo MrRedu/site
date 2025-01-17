@@ -1,7 +1,9 @@
+import { Section } from '@/components/atoms/section'
+
 export default function CartPage() {
   return (
-    <>
-      <h2>{`</CartPage>`}</h2>
-    </>
+    <Section component="section">
+      <h2 className="mb-8 text-center text-2xl">Cart</h2>
+    </Section>
   )
 }

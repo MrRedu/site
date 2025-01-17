@@ -19,7 +19,7 @@ import { NAV_ITEMS } from '@/utils/consts'
 
 export const Header = () => {
   return (
-    <header className="grid grid-cols-3 grid-rows-2 px-2 py-5 md:px-4 lg:px-6">
+    <header className="grid grid-cols-3 items-center gap-y-6 px-2 py-5 md:grid-rows-2 md:px-4 lg:px-6">
       <h1 className="hidden">Site</h1>
       <Sheet>
         <SheetTrigger asChild>
@@ -67,7 +67,7 @@ export const Header = () => {
         </Link>
       </Button>
 
-      <nav className="col-span-3">
+      <nav className="col-span-3 hidden md:block">
         <ul className="flex justify-center gap-4 p-2">
           {NAV_ITEMS.map(item => (
             <li key={item.href}>

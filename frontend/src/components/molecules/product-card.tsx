@@ -1,23 +1,23 @@
-import { ArrowRightIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
+import NextImage from 'next/image'
 import Link from 'next/link'
 
-interface CollectionCardProps {
+interface ProductCardProps {
   href: string
   title: string
-  src?: string
+  src: string
+  price: number
 }
 
-export const CollectionCard = ({ href, title, src }: CollectionCardProps) => {
+export const ProductCard = ({ href, title, price, src }: ProductCardProps) => {
   return (
     <Link
       href={href}
       className="group flex w-full flex-col gap-4 overflow-hidden"
-      aria-label={`Open ${title} collection`}
+      aria-label={`Open ${title} product`}
     >
       <div className="h-[520px] overflow-hidden rounded-md">
-        <Image
-          src={src || '/placeholder.png'}
+        <NextImage
+          src={`http://localhost:1337${src}` || '/placeholder.webp'}
           width={400}
           height={600}
           // priority={index < 3}
@@ -28,9 +28,9 @@ export const CollectionCard = ({ href, title, src }: CollectionCardProps) => {
           className="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
         />
       </div>
-      <div className="flex w-full items-center gap-2">
-        <h3 className="text-lg">{title || 'Unknown'}</h3>
-        <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
+      <div className="flex w-full flex-col items-end gap-2">
+        <h3 className="text-md">{title || 'Unknown'}</h3>
+        <span>${price} USD</span>
       </div>
     </Link>
   )

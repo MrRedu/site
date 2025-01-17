@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Asul } from 'next/font/google'
 
+import { Footer } from '@/components/organisms/footer'
 import { Header } from '@/components/organisms/header'
 
 const asulFont = Asul({
@@ -58,6 +59,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
